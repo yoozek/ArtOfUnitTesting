@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogAn", "LogAn\LogAn.csproj", "{1B83DC7D-4E76-4DDE-81B7-D6AE87750AEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogAn.UnitTests", "LogAn.UnitTests\LogAn.UnitTests.csproj", "{DF797E4A-DF21-4739-AEDA-4A31F55262D9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B83DC7D-4E76-4DDE-81B7-D6AE87750AEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B83DC7D-4E76-4DDE-81B7-D6AE87750AEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B83DC7D-4E76-4DDE-81B7-D6AE87750AEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B83DC7D-4E76-4DDE-81B7-D6AE87750AEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF797E4A-DF21-4739-AEDA-4A31F55262D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF797E4A-DF21-4739-AEDA-4A31F55262D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF797E4A-DF21-4739-AEDA-4A31F55262D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF797E4A-DF21-4739-AEDA-4A31F55262D9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
