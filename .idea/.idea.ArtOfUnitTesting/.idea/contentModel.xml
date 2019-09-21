@@ -8,6 +8,8 @@
       <e p="ArtOfUnitTesting.sln" t="IncludeFlat" />
       <e p="LogAn" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
+        <e p="IFileNameRules.cs" t="Include" />
+        <e p="ILogger.cs" t="Include" />
         <e p="LogAn.csproj" t="IncludeRecursive" />
         <e p="LogAnalyzer.cs" t="Include" />
         <e p="MemCalculator.cs" t="Include" />
@@ -18,11 +20,15 @@
             </e>
           </e>
         </e>
+        <e p="Presenter.cs" t="Include" />
       </e>
       <e p="LogAn.UnitTests" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="LogAn.UnitTests.csproj" t="IncludeRecursive" />
+        <e p="LogAnalyzer2Tests.cs" t="Include" />
+        <e p="LogAnalyzer3Tests.cs" t="Include" />
         <e p="LogAnalyzerTests.cs" t="Include" />
+        <e p="MemCalculatorTests.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.2" t="Include">

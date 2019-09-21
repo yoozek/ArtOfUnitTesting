@@ -1,7 +1,6 @@
-using LogAn;
 using NUnit.Framework;
 
-namespace Tests
+namespace LogAn.UnitTests
 {
     public class MemCalculatorTests
     {

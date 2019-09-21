@@ -1,50 +1,42 @@
 using System;
-using LogAn;
+using NSubstitute;
 using NUnit.Framework;
 
-namespace Tests
+namespace LogAn.UnitTests
 {
     public class LogAnalyzerTests
     {
-        [SetUp]
-        public void Setup()
+        [Test]
+        public void Analyze_TooShortFileName_CallLogger()
         {
+            var logger = Substitute.For<ILogger>();
+            var analyzer = new LogAnalyzer(logger);
+
+            analyzer.MinNameLength = 6;
+            analyzer.Analyze("a.txt");
+
+            logger.Received().LogError("Filename too short: a.txt");
         }
-        
-        [TestCase("test.slf", true)]
-        [TestCase("test.SLF", true)]
-        [TestCase("test.foo", false)]
-        [TestCase("test.FOO", false)]
-        public void IsValidLogFileName_VariousExtensions_ChecksThem(string fileName, bool expected)
+
+        [Test]
+        public void Returns_ByDefault_WorksForHardCodedArgument()
         {
-            var sut = new LogAnalyzer();
+            var fakeRules = Substitute.For<IFileNameRules>();
 
-            var result = sut.IsValidLogFileName(fileName);
+            fakeRules.IsValidLogFileName(Arg.Any<string>()).Returns(true);
 
-            Assert.AreEqual(expected, result);
+            Assert.IsTrue(fakeRules.IsValidLogFileName("strict.txt"));
         }
-        
 
-        [TestCase("")]
-        [TestCase(null)]
-        public void IsValidLogFileName_NullOrEmptyFileName_ThrowsException(string fileName)
+        [Test]
+        public void Returns_ArgAny_Throws()
         {
-            var sut = new LogAnalyzer();
-
-            var ex = Assert.Catch<ArgumentException>(() => { sut.IsValidLogFileName(fileName); });
+            var fakeRules = Substitute.For<IFileNameRules>();
             
-            StringAssert.Contains("filename has to be provided", ex.Message);
-        }
-        
-        [TestCase("badextension.foo", false)]
-        [TestCase("goodextension.slf", true)]
-        public void IsValidLogFileName_WhenCalled_ChangesWasLastFileNameValid(string fileName, bool expected)
-        {
-            var sut = new LogAnalyzer();
+            fakeRules.When(x => x.IsValidLogFileName(Arg.Any<string>()))
+                .Do(context => throw new Exception("fake exception"));
 
-            sut.IsValidLogFileName(fileName);
-            
-            Assert.AreEqual(expected, sut.WasLastFileNameValid);
+            Assert.Throws<Exception>(() => fakeRules.IsValidLogFileName("anything"));
         }
     }
 }

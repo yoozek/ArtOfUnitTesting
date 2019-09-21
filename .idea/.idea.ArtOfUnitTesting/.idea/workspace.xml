@@ -2,10 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb619f90-85d2-45e6-b3ec-e07290e9a307" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArtOfUnitTesting.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LogAn/LogAnalyzer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LogAn/MemCalculator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LogAn.UnitTests/LogAnalyzer2Tests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LogAn.UnitTests/LogAnalyzer3Tests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LogAn/IFileNameRules.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LogAn/ILogger.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LogAn/Presenter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ArtOfUnitTesting/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ArtOfUnitTesting/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ArtOfUnitTesting/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ArtOfUnitTesting/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LogAn.UnitTests/LogAn.UnitTests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/LogAn.UnitTests/LogAn.UnitTests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LogAn.UnitTests/LogAnalyzerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LogAn.UnitTests/LogAnalyzerTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LogAn.UnitTests/MemCalculatorTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LogAn.UnitTests/MemCalculatorTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LogAn/LogAnalyzer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LogAn/LogAnalyzer.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,11 +20,31 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/LogAn/Presenter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1228803A-F2EE-4E38-8534-5899696DD2A2/80/0c886fe3/SubstituteExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LogAn.UnitTests/LogAnalyzer2Tests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LogAn.UnitTests/MemCalculatorTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LogAn/LogAnalyzer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LogAn/ILogger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LogAn.UnitTests/LogAnalyzer3Tests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LogAn/MemCalculator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LogAn.UnitTests/LogAnalyzerTests.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -26,8 +53,13 @@
       <list>
         <option value="$PROJECT_DIR$/LogAn/Class1.cs" />
         <option value="$PROJECT_DIR$/LogAn/MemCalculator.cs" />
+        <option value="$PROJECT_DIR$/LogAn.UnitTests/MemCalculatorTests.cs" />
         <option value="$PROJECT_DIR$/LogAn/LogAnalyzer.cs" />
+        <option value="$PROJECT_DIR$/LogAn/ILogger.cs" />
         <option value="$PROJECT_DIR$/LogAn.UnitTests/LogAnalyzerTests.cs" />
+        <option value="$PROJECT_DIR$/LogAn.UnitTests/LogAnalyzer2Tests.cs" />
+        <option value="$PROJECT_DIR$/LogAn.UnitTests/LogAnalyzer3Tests.cs" />
+        <option value="$PROJECT_DIR$/LogAn/Presenter.cs" />
       </list>
     </option>
   </component>
@@ -48,6 +80,13 @@
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -71,8 +110,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1568847090348</updated>
-      <workItem from="1568847093988" duration="1023000" />
+      <workItem from="1568847093988" duration="7059000" />
     </task>
+    <task id="LOCAL-00001" summary="Part 1 completed">
+      <created>1569076838645</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1569076838645</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Part 1 completed">
+      <created>1569076890255</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1569076890255</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,12 +147,19 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
+    <MESSAGE value="Part 1 completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Part 1 completed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="123" key="Rider.ProjectTemplateDialog.Size" />
     <state x="320" y="123" key="Rider.ProjectTemplateDialog.Size/2880.1800" />
+    <state x="2398" y="421" key="RiderGenerateDialog" />
+    <state x="2398" y="421" key="RiderGenerateDialog/3440.1440" />
+    <state x="176" y="82" key="SettingsEditor" />
+    <state x="176" y="82" key="SettingsEditor/2880.1800" />
     <state x="383" y="164" width="672" height="678" key="search.everywhere.popup" />
     <state x="383" y="164" width="672" height="678" key="search.everywhere.popup/2880.1800" />
+    <state x="383" y="164" width="672" height="678" key="search.everywhere.popup/3440.1440" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
