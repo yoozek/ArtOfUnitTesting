@@ -1,3 +1,4 @@
+using System;
 using LogAn;
 using NUnit.Framework;
 
@@ -10,34 +11,40 @@ namespace Tests
         {
         }
         
-        [Test]
-        public void IsValidLogFileName_GoodExtensionLowercase_ReturnsTrue()
+        [TestCase("test.slf", true)]
+        [TestCase("test.SLF", true)]
+        [TestCase("test.foo", false)]
+        [TestCase("test.FOO", false)]
+        public void IsValidLogFileName_VariousExtensions_ChecksThem(string fileName, bool expected)
         {
             var sut = new LogAnalyzer();
 
-            var result = sut.IsValidLogFileName("test.slf");
+            var result = sut.IsValidLogFileName(fileName);
 
-            Assert.IsTrue(result);
+            Assert.AreEqual(expected, result);
         }
         
-        [Test]
-        public void IsValidLogFileName_GoodExtensionUppercase_ReturnsTrue()
+
+        [TestCase("")]
+        [TestCase(null)]
+        public void IsValidLogFileName_NullOrEmptyFileName_ThrowsException(string fileName)
         {
             var sut = new LogAnalyzer();
 
-            var result = sut.IsValidLogFileName("test.SLF");
-
-            Assert.IsTrue(result);
+            var ex = Assert.Catch<ArgumentException>(() => { sut.IsValidLogFileName(fileName); });
+            
+            StringAssert.Contains("filename has to be provided", ex.Message);
         }
-
-        [Test]
-        public void IsValidLogFileName_BadExtension_ReturnsFalse()
+        
+        [TestCase("badextension.foo", false)]
+        [TestCase("goodextension.slf", true)]
+        public void IsValidLogFileName_WhenCalled_ChangesWasLastFileNameValid(string fileName, bool expected)
         {
             var sut = new LogAnalyzer();
 
-            var result = sut.IsValidLogFileName("test.foo");
-
-            Assert.IsFalse(result);
+            sut.IsValidLogFileName(fileName);
+            
+            Assert.AreEqual(expected, sut.WasLastFileNameValid);
         }
     }
 }
